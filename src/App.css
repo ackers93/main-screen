@@ -1,0 +1,28 @@
+.App {
+  text-align: left;
+}
+
+.directory h1 {
+  text-align: center;
+  color: darkblue;
+  font-size: 3.5em;
+}
+
+.directory .both-floors {
+  padding-left: 2em;
+}
+
+.directory h3 {
+  color: darkgray;
+  text-decoration: underline;
+}
+
+.directory h4 {
+  color: darkblue;
+  padding-left: 1.5em;
+}
+
+.bottom-div {
+  display: flex;
+  justify-content: space-around;
+}
