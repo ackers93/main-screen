@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import { WeatherSVG } from "./weatherSVG";
+
+import "../weather.css";
+
 const Weather = () => {
   // initialize state
   const [weather, setWeather] = useState("");
@@ -32,6 +36,7 @@ const Weather = () => {
 
   return (
     <div className="weather">
+      <WeatherSVG />
       <div className="weatherdiv">
         <h1>{data.temp}°</h1>
         <h1>{weather}</h1>
