@@ -11,7 +11,7 @@ const Directory = props => {
           <h4>Accounting</h4>
           <h4>Call Center</h4>
           <h4>Human Resources</h4>
-          <h4>Invertory Department</h4>
+          <h4>Inventory Department</h4>
           <h4>Warehouse</h4>
         </div>
 

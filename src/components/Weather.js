@@ -38,9 +38,9 @@ const Weather = () => {
     <div className="weather">
       <WeatherSVG />
       <div className="weatherdiv">
-        <h1>{data.temp}°</h1>
-        <h1>{weather}</h1>
-        <h1>{data.city_name}</h1>
+        <h1 className="temp">{data.temp}°</h1>
+        <h1 className="weathertext">{weather}</h1>
+        <h1 className="cityname">{data.city_name}, CA</h1>
       </div>
     </div>
   );

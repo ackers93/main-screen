@@ -12,11 +12,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <header>
+          <link
+            rel="stylesheet"
+            href="https://use.typekit.net/jqb5edi.css"
+          ></link>
+        </header>
         <Directory />
         <div className="bottom-div">
           <TimeDate />
           <Weather />
         </div>
+        <footer>
+          <img src="./images/background.png"></img>
+        </footer>
       </div>
     );
   }
