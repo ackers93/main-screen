@@ -52,7 +52,7 @@ class TimeDate extends React.Component {
 
   render() {
     return (
-      <div className="date-time">
+      <div className="time-date">
         <div className="clock">
           <span className="hours">
             <ClockDigits number={this.state.hours} hours={true} />
@@ -64,8 +64,8 @@ class TimeDate extends React.Component {
           </span>
         </div>
         <div className="date">
-          <span className="day-of-month">{this.state.date}</span>
           <span className="month">{this.state.n}</span>
+          <span className="day-of-month">{this.state.date},</span>
           <span className="year">{this.state.year}</span>
         </div>
       </div>

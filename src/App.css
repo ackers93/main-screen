@@ -2,10 +2,17 @@
   text-align: left;
 }
 
+.directory {
+  border-bottom: 1px solid lightgray;
+}
+
 .directory h1 {
   text-align: center;
-  color: darkblue;
+  color: #383b69;
   font-size: 3.5em;
+  font-family: fieldwork, sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .directory .both-floors {
@@ -13,16 +20,91 @@
 }
 
 .directory h3 {
-  color: darkgray;
+  color: #484a48;
   text-decoration: underline;
+  font-family: fieldwork, sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .directory h4 {
-  color: darkblue;
+  color: #383b69;
   padding-left: 1.5em;
+  font-family: fieldwork, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .bottom-div {
   display: flex;
   justify-content: space-around;
 }
+
+.bottom-div .time-date {
+  color: #383b69;
+  background-color: lightgray;
+}
+
+.bottom-div .time-date .clock {
+  font-family: fieldwork, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.2em;
+}
+
+.bottom-div .time-date .date {
+  font-family: fieldwork-hum, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-div .time-date .date .month {
+  margin-right: 3%;
+}
+
+.bottom-div .time-date .date .day-of-month {
+  margin-right: 3%;
+}
+
+.bottom-div .weather {
+  color: #383b69;
+}
+
+/* Fonts added:
+Fieldwork Geo Regular
+
+font-family: fieldwork, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Fieldwork Italic Regular
+
+font-family: fieldwork, sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Fieldwork Geo Bold
+
+font-family: fieldwork, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Fieldwork Italic Bold
+
+font-family: fieldwork, sans-serif;
+font-weight: 700;
+font-style: italic;
+
+Fieldwork Hum Regular
+
+font-family: fieldwork-hum, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Fieldwork Hum Bold
+
+font-family: fieldwork-hum, sans-serif;
+font-weight: 700;
+font-style: normal; */
