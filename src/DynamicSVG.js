@@ -18,7 +18,13 @@ const components = {
   windycloud: WindyCloud
 };
 
-export function DynamicSvg(props) {
+function DynamicSvg(props) {
   const WeatherIcon = components[props.icon];
-  return <WeatherIcon />;
+  return (
+    <div>
+      <WeatherIcon />
+    </div>
+  );
 }
+
+export default DynamicSvg;

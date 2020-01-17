@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import { DynamicSvg } from "../DynamicSVG";
+import DynamicSvg from "../DynamicSVG";
 
 import "../weather.css";
 
@@ -13,23 +13,57 @@ const Weather = () => {
   const [data, setData] = useState("");
 
   const dynamicSwitch = code => {
-  
-   if (code === "200" || "201" || "202" || "230" || "231" || "232" || "230") {
-     setIcon("Thunder")
-   } else if (code === "300" || "301" || "302" || "500" || "501" || "511" || "520" || "502" || "521") {
-      setIcon("Rain")
-   } else if (code === "600" || "601" || "602" || "610" || "621" || "623" || "611" || "612") {
-      setIcon("Snow")
-    } else if (code === "700" || "711" || "721" || "731" || "741" || "751") {
-      setIcon("Mist")
+    if (
+      code === "200" ||
+      code === "201" ||
+      code === "202" ||
+      code === "230" ||
+      code === "231" ||
+      code === "232" ||
+      code === "230"
+    ) {
+      setIcon("thundercloud");
+    } else if (
+      code === "300" ||
+      code === "301" ||
+      code === "302" ||
+      code === "500" ||
+      code === "501" ||
+      code === "511" ||
+      code === "520" ||
+      code === "502" ||
+      code === "521" ||
+      code === "700" ||
+      code === "711" ||
+      code === "721" ||
+      code === "731" ||
+      code === "741" ||
+      code === "751" ||
+      code === "900"
+    ) {
+      setIcon("raincloud");
+    } else if (
+      code === "600" ||
+      code === "601" ||
+      code === "602" ||
+      code === "610" ||
+      code === "621" ||
+      code === "623" ||
+      code === "611" ||
+      code === "612"
+    ) {
+      setIcon("snowcloud");
     } else if (code === "800") {
-      setIcon("Sun")
-   } else if (code === "801" || "802" || "803" || "804") {
-      setIcon("Few Clouds")
-    } else (code === "900") {
-      setIcon("Unknown Precipitation")
+      setIcon("sunshine");
+    } else if (
+      code === "801" ||
+      code === "802" ||
+      code === "803" ||
+      code === "804"
+    ) {
+      setIcon("suncloud");
     }
-  }
+  };
 
   useEffect(() => {
     axios(
