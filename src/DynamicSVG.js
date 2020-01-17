@@ -22,7 +22,7 @@ function DynamicSvg(props) {
   const WeatherIcon = components[props.icon];
   return (
     <div>
-      <WeatherIcon />
+      <WeatherIcon className="icon" />
     </div>
   );
 }
