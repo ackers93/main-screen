@@ -74,7 +74,7 @@ class TimeDate extends React.Component {
 
   componentDidMount() {
     this.getTime();
-    this.interval = setInterval(this.getTime, 1000);
+    this.interval = setInterval(this.getTime, 60000);
   }
 }
 

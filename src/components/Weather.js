@@ -1,24 +1,69 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import { RainCloud } from "./WeatherSVG/RainCloud";
-import { SnowCloud } from "./WeatherSVG/SnowCloud";
-import { SunCloud } from "./WeatherSVG/SunCloud";
-import { Sunshine } from "./WeatherSVG/Sunshine";
-import { ThunderCloud } from "./WeatherSVG/ThunderCloud";
-import { WindyCloud } from "./WeatherSVG/WindyCloud";
+import DynamicSvg from "../DynamicSVG";
 
 import "../weather.css";
 
 const Weather = () => {
   // initialize state
-  const [icon, setIcon] = useState("");
+  const [icon, setIcon] = useState("sunshine");
   const [weatherCode, setWeatherCode] = useState("");
   const [weather, setWeather] = useState("");
-  const [data, setData] = useState({
-    isFetching: false,
-    data: null
-  });
+  const [data, setData] = useState("");
+
+  const dynamicSwitch = code => {
+    if (
+      code === "200" ||
+      code === "201" ||
+      code === "202" ||
+      code === "230" ||
+      code === "231" ||
+      code === "232" ||
+      code === "230"
+    ) {
+      setIcon("thundercloud");
+    } else if (
+      code === "300" ||
+      code === "301" ||
+      code === "302" ||
+      code === "500" ||
+      code === "501" ||
+      code === "511" ||
+      code === "520" ||
+      code === "502" ||
+      code === "521" ||
+      code === "700" ||
+      code === "711" ||
+      code === "721" ||
+      code === "731" ||
+      code === "741" ||
+      code === "751" ||
+      code === "900"
+    ) {
+      setIcon("raincloud");
+    } else if (
+      code === "600" ||
+      code === "601" ||
+      code === "602" ||
+      code === "610" ||
+      code === "621" ||
+      code === "623" ||
+      code === "611" ||
+      code === "612"
+    ) {
+      setIcon("snowcloud");
+    } else if (code === "800") {
+      setIcon("sunshine");
+    } else if (
+      code === "801" ||
+      code === "802" ||
+      code === "803" ||
+      code === "804"
+    ) {
+      setIcon("suncloud");
+    }
+  };
 
   useEffect(() => {
     axios(
@@ -42,28 +87,19 @@ const Weather = () => {
       });
   }, []);
 
-  //  if (weatherCode === "200" || "201" || "202" || "230" || "231" || "232" || "230") {
-  //    setIcon("Thunder")
-  //  } else if (weatherCode === "300" || "301" || "302" || "500" || "501" || "511" || "520" || "502" || "521") {
-  //     setIcon("Rain")
-  //  } else if (weatherCode === "600" || "601" || "602" || "610" || "621" || "623" || "611" || "612") {
-  //     setIcon("Snow")
-  //   } else if (weatherCode === "700" || "711" || "721" || "731" || "741" || "751") {
-  //     setIcon("Mist")
-  //   } else if (weatherCode === "800") {
-  //     setIcon("Sun")
-  //  } else if (weatherCode === "801" || "802" || "803" || "804") {
-  //     setIcon("Few Clouds")
-  //   } else (weatherCode === "900") {
-  //     setIcon("Unknown Precipitation")
-  //   }
+  useEffect(() => {
+    console.log(weatherCode);
+    dynamicSwitch(weatherCode);
+    console.log(data);
+  }, [weatherCode, data]);
 
   return (
     <div className="weather">
-      <Sunshine />
       <div className="weatherdiv">
         <div className="weathericon">
-          <p>{icon}</p>
+          <p>
+            <DynamicSvg icon={icon} />
+          </p>
           <h1 className="temp">
             {data.temp}
             <span>°</span>
@@ -77,3 +113,29 @@ const Weather = () => {
 };
 
 export default Weather;
+
+// const dynamicSwitch = code => {
+//   switch (true) {
+//     case "200" || "201" || "202" || "230" || "231" || "232" || "230":
+//       return setIcon("thundercloud");
+//     case "300" ||
+//       "301" ||
+//       "302" ||
+//       "500" ||
+//       "501" ||
+//       "511" ||
+//       "520" ||
+//       "502" ||
+//       "521" ||
+//       "900":
+//       return setIcon("raincloud");
+//     case "600" || "601" || "602" || "610" || "621" || "623" || "611" || "612":
+//       return setIcon("snowcloud");
+//     case "700" || "711" || "721" || "731" || "741" || "751":
+//       return setIcon("windycloud");
+//     case "801" || "802" || "803" || "804":
+//       return setIcon("suncloud");
+//     default:
+//       return setIcon("sunshine");
+//   }
+// };
