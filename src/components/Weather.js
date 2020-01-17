@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import { RainCloud } from "./WeatherSVG/RainCloud";
-import { SnowCloud } from "./WeatherSVG/SnowCloud";
-import { SunCloud } from "./WeatherSVG/SunCloud";
-import { Sunshine } from "./WeatherSVG/Sunshine";
-import { ThunderCloud } from "./WeatherSVG/ThunderCloud";
-import { WindyCloud } from "./WeatherSVG/WindyCloud";
+import {
+  RainCloud,
+  SnowCloud,
+  SunCloud,
+  Sunshine,
+  ThunderCloud,
+  WindyCloud
+} from "./WeatherSVG";
 
 import "../weather.css";
 
