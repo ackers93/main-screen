@@ -97,9 +97,7 @@ const Weather = () => {
     <div className="weather">
       <div className="weatherdiv">
         <div className="weathericon">
-          <p>
-            <DynamicSvg icon={icon} />
-          </p>
+          <DynamicSvg icon={icon} />
           <h1 className="temp">
             {data.temp}
             <span>°</span>
