@@ -3,6 +3,7 @@ import Directory from "./components/Directory";
 import TimeDate from "./components/TimeDate";
 import Weather from "./components/Weather";
 import "./App.css";
+import background from "./images/background.png";
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,9 @@ class App extends React.Component {
           <TimeDate />
           <Weather />
         </div>
+        {/* <footer>
+          <img className="footer-image" src={background}></img>
+        </footer> */}
       </div>
     );
   }
