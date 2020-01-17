@@ -1,26 +1,35 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import {
-  RainCloud,
-  SnowCloud,
-  SunCloud,
-  Sunshine,
-  ThunderCloud,
-  WindyCloud
-} from "./WeatherSVG";
+import { DynamicSvg } from "../DynamicSVG";
 
 import "../weather.css";
 
 const Weather = () => {
   // initialize state
-  const [icon, setIcon] = useState("");
+  const [icon, setIcon] = useState("sunshine");
   const [weatherCode, setWeatherCode] = useState("");
   const [weather, setWeather] = useState("");
-  const [data, setData] = useState({
-    isFetching: false,
-    data: null
-  });
+  const [data, setData] = useState("");
+
+  const dynamicSwitch = code => {
+  
+   if (code === "200" || "201" || "202" || "230" || "231" || "232" || "230") {
+     setIcon("Thunder")
+   } else if (code === "300" || "301" || "302" || "500" || "501" || "511" || "520" || "502" || "521") {
+      setIcon("Rain")
+   } else if (code === "600" || "601" || "602" || "610" || "621" || "623" || "611" || "612") {
+      setIcon("Snow")
+    } else if (code === "700" || "711" || "721" || "731" || "741" || "751") {
+      setIcon("Mist")
+    } else if (code === "800") {
+      setIcon("Sun")
+   } else if (code === "801" || "802" || "803" || "804") {
+      setIcon("Few Clouds")
+    } else (code === "900") {
+      setIcon("Unknown Precipitation")
+    }
+  }
 
   useEffect(() => {
     axios(
@@ -44,28 +53,19 @@ const Weather = () => {
       });
   }, []);
 
-  //  if (weatherCode === "200" || "201" || "202" || "230" || "231" || "232" || "230") {
-  //    setIcon("Thunder")
-  //  } else if (weatherCode === "300" || "301" || "302" || "500" || "501" || "511" || "520" || "502" || "521") {
-  //     setIcon("Rain")
-  //  } else if (weatherCode === "600" || "601" || "602" || "610" || "621" || "623" || "611" || "612") {
-  //     setIcon("Snow")
-  //   } else if (weatherCode === "700" || "711" || "721" || "731" || "741" || "751") {
-  //     setIcon("Mist")
-  //   } else if (weatherCode === "800") {
-  //     setIcon("Sun")
-  //  } else if (weatherCode === "801" || "802" || "803" || "804") {
-  //     setIcon("Few Clouds")
-  //   } else (weatherCode === "900") {
-  //     setIcon("Unknown Precipitation")
-  //   }
+  useEffect(() => {
+    console.log(weatherCode);
+    dynamicSwitch(weatherCode);
+    console.log(data);
+  }, [weatherCode, data]);
 
   return (
     <div className="weather">
-      <Sunshine />
       <div className="weatherdiv">
         <div className="weathericon">
-          <p>{icon}</p>
+          <p>
+            <DynamicSvg icon={icon} />
+          </p>
           <h1 className="temp">
             {data.temp}
             <span>°</span>
@@ -79,3 +79,29 @@ const Weather = () => {
 };
 
 export default Weather;
+
+// const dynamicSwitch = code => {
+//   switch (true) {
+//     case "200" || "201" || "202" || "230" || "231" || "232" || "230":
+//       return setIcon("thundercloud");
+//     case "300" ||
+//       "301" ||
+//       "302" ||
+//       "500" ||
+//       "501" ||
+//       "511" ||
+//       "520" ||
+//       "502" ||
+//       "521" ||
+//       "900":
+//       return setIcon("raincloud");
+//     case "600" || "601" || "602" || "610" || "621" || "623" || "611" || "612":
+//       return setIcon("snowcloud");
+//     case "700" || "711" || "721" || "731" || "741" || "751":
+//       return setIcon("windycloud");
+//     case "801" || "802" || "803" || "804":
+//       return setIcon("suncloud");
+//     default:
+//       return setIcon("sunshine");
+//   }
+// };
