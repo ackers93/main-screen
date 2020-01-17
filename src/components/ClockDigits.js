@@ -11,7 +11,7 @@ export class ClockDigits extends React.Component {
       number = number - 12;
     }
 
-    if (this.props.minutes < 10) {
+    if (number < 10) {
       number = "0" + number;
     }
     return number;

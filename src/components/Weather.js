@@ -97,9 +97,7 @@ const Weather = () => {
     <div className="weather">
       <div className="weatherdiv">
         <div className="weathericon">
-          <p>
-            <DynamicSvg icon={icon} />
-          </p>
+          <DynamicSvg icon={icon} />
           <h1 className="temp">
             {data.temp}
             <span>°</span>
@@ -113,29 +111,3 @@ const Weather = () => {
 };
 
 export default Weather;
-
-// const dynamicSwitch = code => {
-//   switch (true) {
-//     case "200" || "201" || "202" || "230" || "231" || "232" || "230":
-//       return setIcon("thundercloud");
-//     case "300" ||
-//       "301" ||
-//       "302" ||
-//       "500" ||
-//       "501" ||
-//       "511" ||
-//       "520" ||
-//       "502" ||
-//       "521" ||
-//       "900":
-//       return setIcon("raincloud");
-//     case "600" || "601" || "602" || "610" || "621" || "623" || "611" || "612":
-//       return setIcon("snowcloud");
-//     case "700" || "711" || "721" || "731" || "741" || "751":
-//       return setIcon("windycloud");
-//     case "801" || "802" || "803" || "804":
-//       return setIcon("suncloud");
-//     default:
-//       return setIcon("sunshine");
-//   }
-// };
