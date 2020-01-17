@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import { WeatherSVG } from "./weatherSVG";
+import { RainCloud } from "./WeatherSVG/RainCloud";
+import { SnowCloud } from "./WeatherSVG/SnowCloud";
+import { SunCloud } from "./WeatherSVG/SunCloud";
+import { Sunshine } from "./WeatherSVG/Sunshine";
+import { ThunderCloud } from "./WeatherSVG/ThunderCloud";
+import { WindyCloud } from "./WeatherSVG/WindyCloud";
 
 import "../weather.css";
 
@@ -36,7 +41,7 @@ const Weather = () => {
 
   return (
     <div className="weather">
-      <WeatherSVG />
+      <Sunshine />
       <div className="weatherdiv">
         <h1>{data.temp}°</h1>
         <h1>{weather}</h1>
