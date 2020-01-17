@@ -18,9 +18,6 @@ class App extends React.Component {
           <TimeDate />
           <Weather />
         </div>
-        {/* <footer>
-          <img className="footer-image" src={background}></img>
-        </footer> */}
       </div>
     );
   }
