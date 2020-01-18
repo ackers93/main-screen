@@ -1,8 +1,9 @@
 .App {
-  max-height: 100vh;
+  height: auto;
   width: 100%;
   text-align: left;
   background-color: white;
+  background-size: cover;
 }
 
 .directory {
@@ -47,9 +48,10 @@
   align-items: center;
   justify-content: space-around;
   background: url("./images/background.png");
-  background-size: cover;
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
   padding-bottom: 20em;
-  width: 100%;
 }
 
 .bottom-div .time-date {
