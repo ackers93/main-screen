@@ -47,9 +47,9 @@
   align-items: center;
   justify-content: space-around;
   background: url("./images/background.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 20em;
-  width: 100%;
 }
 
 .bottom-div .time-date {
