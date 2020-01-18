@@ -3,7 +3,7 @@
   width: 100%;
   text-align: left;
   background-color: white;
-  background-size: cover;
+  font-size: 62.5%;
 }
 
 .directory {
@@ -14,14 +14,15 @@
   margin-top: 0;
   text-align: center;
   color: #383b69;
-  font-size: 3.7em;
+  font-size: 6rem;
   font-family: fieldwork, sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
 .directory .both-floors {
-  padding-left: 2em;
+  padding-left: 2rem;
+  margin-top: -80px;
 }
 
 .directory h3 {
@@ -30,16 +31,18 @@
   font-family: fieldwork, sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 2em;
+  font-size: 4.1rem;
+  margin-bottom: -0.5rem;
 }
 
 .directory h4 {
   color: #383b69;
-  padding-left: 1.5em;
+  padding-left: 4rem;
   font-family: fieldwork, sans-serif;
   font-weight: 700;
+  margin: 1rem;
   font-style: normal;
-  font-size: 1.8em;
+  font-size: 3rem;
 }
 
 .bottom-div {
@@ -47,22 +50,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: url("./images/background.png");
-  background-size: 100%;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  padding-bottom: 20em;
+  margin-top: 9rem;
 }
 
 .bottom-div .time-date {
   color: #383b69;
+  margin-top: -12rem;
 }
 
 .bottom-div .time-date .clock {
   font-family: fieldwork, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3em;
+  font-size: 6rem;
 }
 
 .bottom-div .time-date .date {
@@ -71,7 +71,8 @@
   font-style: normal;
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
+  margin-top: -2rem;
+  font-size: 2.5rem;
 }
 
 .bottom-div .time-date .date .month {
@@ -84,27 +85,28 @@
 
 .bottom-div .weather {
   color: #383b69;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   display: flex;
   text-align: center;
+  margin-top: -6rem;
 }
 
 .bottom-div .weather .weatherdiv .weathericon {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0;
+  margin-top: -6rem;
 }
 
 .bottom-div .weather .weatherdiv .weathertext {
-  margin-top: -1em;
+  margin-top: -90px;
 }
 
 .bottom-div .weather .temp {
   font-family: fieldwork, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3em;
+  font-size: 4em;
   padding-left: 20px;
 }
 
@@ -119,42 +121,9 @@
   font-weight: 400;
   font-style: normal;
   font-size: 1.5em;
-  margin-top: -1em;
+  margin-top: -2.5rem;
 }
 
-/* Fonts added:
-Fieldwork Geo Regular
-
-font-family: fieldwork, sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Fieldwork Italic Regular
-
-font-family: fieldwork, sans-serif;
-font-weight: 400;
-font-style: italic;
-
-Fieldwork Geo Bold
-
-font-family: fieldwork, sans-serif;
-font-weight: 700;
-font-style: normal;
-
-Fieldwork Italic Bold
-
-font-family: fieldwork, sans-serif;
-font-weight: 700;
-font-style: italic;
-
-Fieldwork Hum Regular
-
-font-family: fieldwork-hum, sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Fieldwork Hum Bold
-
-font-family: fieldwork-hum, sans-serif;
-font-weight: 700;
-font-style: normal; */
+.footer {
+  max-width: 100%;
+}
