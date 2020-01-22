@@ -31,7 +31,7 @@
   font-family: fieldwork, sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 4.1rem;
+  font-size: 3.6rem;
   margin-bottom: -0.5rem;
 }
 
@@ -42,7 +42,7 @@
   font-weight: 700;
   margin: 1rem;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 .bottom-div {
@@ -71,7 +71,6 @@
   font-style: normal;
   display: flex;
   justify-content: center;
-  margin-top: -2rem;
   font-size: 2.5rem;
 }
 
@@ -99,7 +98,7 @@
 }
 
 .bottom-div .weather .weatherdiv .weathertext {
-  margin-top: -90px;
+  margin-top: -65px;
 }
 
 .bottom-div .weather .temp {
