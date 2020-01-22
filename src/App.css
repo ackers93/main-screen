@@ -22,7 +22,7 @@
 
 .directory .both-floors {
   padding-left: 2rem;
-  margin-top: -80px;
+  margin-top: 3rem;
 }
 
 .directory h3 {
@@ -32,7 +32,7 @@
   font-weight: 700;
   font-style: italic;
   font-size: 3.6rem;
-  margin-bottom: -0.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .directory h4 {
@@ -40,13 +40,13 @@
   padding-left: 4rem;
   font-family: fieldwork, sans-serif;
   font-weight: 700;
-  margin: 1rem;
+  margin: 1.4rem;
   font-style: normal;
   font-size: 2.8rem;
 }
 
 .bottom-div {
-  padding-top: 2em;
+  padding-top: 6em;
   display: flex;
   align-items: center;
   justify-content: space-around;
