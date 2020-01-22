@@ -14,7 +14,7 @@
   margin-top: 1rem;
   text-align: center;
   color: #383b69;
-  font-size: 5rem;
+  font-size: 7rem;
   font-family: fieldwork, sans-serif;
   font-weight: 700;
   font-style: italic;
@@ -46,11 +46,10 @@
 }
 
 .bottom-div {
-  padding-top: 6em;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 9rem;
+  margin-top: 20rem;
 }
 
 .bottom-div .time-date {
