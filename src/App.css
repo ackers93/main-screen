@@ -12,6 +12,7 @@
 
 .directory h1 {
   margin-top: 1rem;
+  margin-bottom: -2rem;
   text-align: center;
   color: #383b69;
   font-size: 7rem;
@@ -22,7 +23,7 @@
 
 .directory .both-floors {
   padding-left: 2rem;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 
 .directory h3 {
@@ -49,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 17rem;
+  margin-top: 15rem;
 }
 
 .bottom-div .time-date {
