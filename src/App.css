@@ -49,19 +49,22 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 20rem;
+  margin-top: 17rem;
 }
 
 .bottom-div .time-date {
   color: #383b69;
   margin-top: -12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bottom-div .time-date .clock {
   font-family: fieldwork, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .bottom-div .time-date .date {
@@ -70,7 +73,7 @@
   font-style: normal;
   display: flex;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
 }
 
 .bottom-div .time-date .date .month {
@@ -97,14 +100,14 @@
 }
 
 .bottom-div .weather .weatherdiv .weathertext {
-  margin-top: -65px;
+  margin-top: -3rem;
 }
 
 .bottom-div .weather .temp {
   font-family: fieldwork, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3em;
+  font-size: 4em;
   padding-left: 20px;
 }
 
