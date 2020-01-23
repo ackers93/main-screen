@@ -87,10 +87,18 @@ const Weather = () => {
       });
   }, []);
 
+  // useEffect(() => {
+  //   console.log(weatherCode);
+  //   dynamicSwitch(weatherCode);
+  //   console.log(data);
+  // }, [weatherCode, data]);
+
   useEffect(() => {
-    console.log(weatherCode);
-    dynamicSwitch(weatherCode);
-    console.log(data);
+    setInterval(() => {
+      console.log(weatherCode);
+      dynamicSwitch(weatherCode);
+      console.log(data);
+    }, 1800000);
   }, [weatherCode, data]);
 
   return (
