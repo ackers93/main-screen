@@ -4,8 +4,8 @@
   text-align: left;
   background-color: white;
   font-size: 62.5%;
-  /* overflow: hidden;
-  margin-bottom: 0; */
+  overflow: hidden;
+  margin-bottom: 0;
 }
 
 .directory {
@@ -131,6 +131,6 @@
 .footer {
   margin-top: 10px;
   max-width: 100%;
-  /* overflow: hidden;
-  margin-bottom: 0; */
+  overflow: hidden;
+  margin-bottom: 0;
 }
