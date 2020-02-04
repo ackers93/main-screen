@@ -98,7 +98,7 @@ const Weather = () => {
       console.log(weatherCode);
       dynamicSwitch(weatherCode);
       console.log(data);
-    }, 1800000);
+    }, 1800);
   }, [weatherCode, data]);
 
   return (
