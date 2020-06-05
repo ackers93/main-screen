@@ -6,7 +6,7 @@ import {
   SunCloud,
   Sunshine,
   ThunderCloud,
-  WindyCloud
+  WindyCloud,
 } from "./components/WeatherSVG";
 
 const components = {
@@ -15,11 +15,13 @@ const components = {
   suncloud: SunCloud,
   sunshine: Sunshine,
   thundercloud: ThunderCloud,
-  windycloud: WindyCloud
+  windycloud: WindyCloud,
 };
 
 function DynamicSvg(props) {
   const WeatherIcon = components[props.icon];
+  console.log(props);
+  console.log(WeatherIcon);
   return (
     <div>
       <WeatherIcon className="icon" />

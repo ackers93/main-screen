@@ -12,7 +12,7 @@ const Weather = () => {
   const [weather, setWeather] = useState("");
   const [data, setData] = useState("");
 
-  const dynamicSwitch = code => {
+  const dynamicSwitch = (code) => {
     if (
       code === "200" ||
       code === "201" ||
@@ -72,33 +72,26 @@ const Weather = () => {
         method: "GET",
         headers: {
           "x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-          "x-rapidapi-key": "f1736cc588mshdf936f14cd9f976p13fb38jsn65705c646b85"
-        }
+          "x-rapidapi-key":
+            "f1736cc588mshdf936f14cd9f976p13fb38jsn65705c646b85",
+        },
       }
     )
-      .then(response => {
+      .then((response) => {
         console.log(response.data.data[0]);
         setData(response.data.data[0]);
         setWeather(response.data.data[0].weather.description);
         setWeatherCode(response.data.data[0].weather.code);
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   }, []);
 
-  // useEffect(() => {
-  //   console.log(weatherCode);
-  //   dynamicSwitch(weatherCode);
-  //   console.log(data);
-  // }, [weatherCode, data]);
-
   useEffect(() => {
-    setInterval(() => {
-      console.log(weatherCode);
-      dynamicSwitch(weatherCode);
-      console.log(data);
-    }, 1800000);
+    console.log(weatherCode);
+    dynamicSwitch(weatherCode);
+    console.log(data);
   }, [weatherCode, data]);
 
   return (
@@ -107,7 +100,7 @@ const Weather = () => {
         <div className="weathericon">
           <DynamicSvg icon={icon} />
           <h1 className="temp">
-            {data.temp}
+            {Math.round(data.temp)}
             <span>°</span>
           </h1>
         </div>
