@@ -100,7 +100,7 @@ const Weather = () => {
         <div className="weathericon">
           <DynamicSvg icon={icon} />
           <h1 className="temp">
-            {data.temp}
+            {Math.round(data.temp)}
             <span>°</span>
           </h1>
         </div>
